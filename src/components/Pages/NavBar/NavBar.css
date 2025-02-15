@@ -1,0 +1,45 @@
+/* 🔹 Base styling for the NavLink */
+.nav-link {
+  position: relative; /* Ensure underline positioning works */
+  text-decoration: none;
+  color: #fff;
+  padding: 10px;
+  transition: color 0.3s ease-in-out;
+}
+
+/* 🔹 Underline effect */
+.nav-link::after {
+  content: "";
+  width: 0;
+  height: 3px;
+  background-color: #000; /* Default underline color */
+  position: absolute;
+  left: 8px;
+  bottom: 3px;
+  transition: width 0.5s ease-in-out;
+}
+
+/* 🔹 On hover, expand the underline */
+.nav-link:hover::after {
+  width: 80%;
+}
+
+/* 🔹 Active NavLink styling */
+.nav-link.active {
+  text-decoration: underline;
+  font-weight: bold;
+  color: #333 !important; /* Active color */
+}
+
+/* 🔹 Keep the underline visible for the active page */
+.nav-link.active::after {
+  width: 80%;
+  background-color: #333; /* Active underline color */
+}
+
+/* 🔹 Active style for the drawer menu */
+.link-active {
+  font-weight: bold;
+  background-color: rgba(0, 0, 0, 0.1);
+  text-decoration: underline;
+}
